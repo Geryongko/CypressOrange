@@ -7,6 +7,8 @@ class AdminPage {
     cy.location('pathname').should('include', '/admin/viewSystemUsers');
     cy.get('h6').should('be.visible').and('contain.text', 'Admin');
     cy.contains('button', 'Add').should('be.visible');
+    cy.get('.oxd-table-row').should('have.length.greaterThan', 0);
+    cy.screenshot('admin-user-management', { capture: 'viewport' });
   }
 
   addUser(username, role, password) {
@@ -44,6 +46,7 @@ class AdminPage {
     this.fieldGroup('Username').find('input').should('be.visible').type(username);
     cy.contains('button', 'Search').click();
     cy.contains('.oxd-table-row', username).should('be.visible');
+    cy.screenshot(`created-${username.split('_')[0]}`, { capture: 'viewport' });
   }
 
   fieldGroup(label) {

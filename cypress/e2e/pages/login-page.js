@@ -15,6 +15,7 @@ class LoginPage {
     cy.get('.oxd-alert-content-text')
       .should('be.visible')
       .and('contain.text', 'Invalid credentials');
+    cy.screenshot('invalid-login-rejected', { capture: 'viewport' });
   }
 }
 
