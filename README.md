@@ -38,8 +38,8 @@ The scenarios use the demo account (`Admin` / `admin123`) stored in `cypress/fix
 
 ## Results and artifacts
 
-- Mochawesome HTML report: `cypress/reports/index.html`
-- Test evidence and failure screenshots: `cypress/screenshots/admin-users.feature/`
+- Mochawesome HTML report: `test-artifacts/reports/index.html`
+- Test evidence and failure screenshots: `test-artifacts/screenshots/admin-users.feature/`
 
 The suite captures evidence for the dashboard, invalid-login validation, Admin user management, and each created user. The HTML report and screenshots are included in the repository; rerunning the headless suite refreshes them. Test results are environment-dependent because the suite targets the live OrangeHRM demo site.
 

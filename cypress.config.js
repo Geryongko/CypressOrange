@@ -34,11 +34,11 @@ module.exports = defineConfig({
     embeddedScreenshots: true,
     html: true,
     json: true,
-    reportDir: 'cypress/reports',
+    reportDir: 'test-artifacts/reports',
     reportPageTitle: 'OrangeHRM Cypress E2E Results',
     overwrite: true,
     saveAllAttempts: false,
   },
   video: false,
-  screenshotsFolder: 'cypress/screenshots',
+  screenshotsFolder: 'test-artifacts/screenshots',
 });
